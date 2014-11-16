@@ -7,10 +7,7 @@ import com.parse.Parse;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
-import java.util.Calendar;
 
-import static java.util.Calendar.MONTH;
-import static java.util.Calendar.YEAR;
 
 /**
  * Created by Alexey on 16.11.2014.
