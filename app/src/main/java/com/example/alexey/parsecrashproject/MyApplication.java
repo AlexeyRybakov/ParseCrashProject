@@ -17,8 +17,8 @@ import static java.util.Calendar.YEAR;
  */
 public class MyApplication extends Application {
     public static final String EVENT_GROUP_NAME = "ALL";
-    public static final String APP_IP="fiJnmpAaI2OqfnT3TuBqJuPap8fTRbXK8RaMhvcC";
-    public static final String CLIENT_KEY="IsSnfkJZBLGMN70tT1TSfIl5WMHMBmO73fU5OosX";
+    public static final String APP_IP="demo";
+    public static final String CLIENT_KEY="demo";
 
     @Override
     public void onCreate() {
