@@ -22,24 +22,23 @@ import java.util.Calendar;
 public class MainActivity extends Activity {
 
     View progressBar;
+    View generate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        final EditText editText = (EditText)findViewById(R.id.editText);
-        final Button generate = (Button)findViewById(R.id.button);
+        generate = findViewById(R.id.button);
         progressBar = findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.GONE);
+
         generate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               int eventsCount = Integer.valueOf(editText.getText().toString());
-                generateEvents(eventsCount);
+
+                generateEvents(1500);
             }
         });
 
-        View button2 = findViewById(R.id.button2);
+        /*View button2 = findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +49,7 @@ public class MainActivity extends Activity {
                    }
                });
             }
-        });
+        });*/
     }
 
     private void generateEvents(final int count){
@@ -102,6 +101,9 @@ public class MainActivity extends Activity {
             @Override
             public void done(ParseException e) {
                 progressBar.setVisibility(View.GONE);
+                generate.setVisibility(View.GONE);
+                findViewById(R.id.textView).setVisibility(View.VISIBLE);
+
                 Log.e("myLogs", "save completed " + e);
             }
         });
