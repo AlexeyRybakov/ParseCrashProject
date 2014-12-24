@@ -34,22 +34,9 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                generateEvents(1500);
+                generateEvents(3000);
             }
         });
-
-        /*View button2 = findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               CalendarEvent.getQuery().fromLocalDatastore().countInBackground(new CountCallback() {
-                   @Override
-                   public void done(int i, ParseException e) {
-                       Toast.makeText(getApplicationContext(),"count "+i,Toast.LENGTH_SHORT).show();
-                   }
-               });
-            }
-        });*/
     }
 
     private void generateEvents(final int count){
